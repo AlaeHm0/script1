@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Gestion des billets</h1>
+    <table>
+        <tr>
+            <td>
+                <label for="nom">Nom</label>
+            </td>
+            <td>
+                <input type="text" name="nom" id="nom">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="prenom">Prenom</label>
+            </td>
+            <td>
+                <input type="text" name="prenom" id="prenom">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="cin">CIN</label>
+            </td>
+            <td>
+                <input type="text" name="cin" id="cin">
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td>
+                <label for="zone">Zone</label>
+            </td>
+            <td><select name="zones" id="zone" onchange="calc()">
+                <option value="0">Choisir une zone</option>
+                <option value="1">zone1</option>
+                <option value="2">zone2</option>
+                <option value="3">zone3</option>
+                <option value="4">zone4</option>
+                <option value="5">zone5</option>
+            </select></td>
+            <td>
+                <label for="tarif">Tarif (en DH)</label>
+            </td>
+            <td>
+                <input type="text" id="tarif" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="age">Tranche d'age</label></td>
+            <td>
+                <select name="age" id="age" onchange="reduc()">
+                    <option value="00">Choisir une tranche</option>
+                    <option value="11">Enfants</option>
+                    <option value="22">Personnes Agées</option>
+                    <option value="33">Personnes Handicapées</option>
+                    <option value="44">Autre</option>
+                </select>
+            </td>
+            <td><label for="reduction">Reduction (en %)</label></td>
+            <td>
+                <input type="text" id="reduction" readonly>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="1">
+        <tr>
+            <td>type de transport</td>
+            <td>type de billet</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" class="ch" id="metro"><label for="metro">Metro</label><br>
+                <input type="checkbox" class="ch" id="RER"><label for="RER">RER</label><br>
+                <input type="checkbox" class="ch" id="TGV"><label for="TGV">TGV</label>
+            </td>
+            <td>
+                <input type="radio" name="billet" id="jour" checked><label for="jour">Jour</label><br>
+                <input type="radio" name="billet" id="semain"><label for="semain">semain</label><br>
+                <input type="radio" name="billet" id="mois"><label for="mois">mois</label>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button id="simuler" onclick="simuler()">Simuler</button>
+    <button id="valider" onclick="afficher()">Valider</button>
+<br><br>
+<input type="text" id="salina">
+
+    <script src="scriptex.js" language="javascript"></script>
+</body>
+</html>
